@@ -1,4 +1,6 @@
+import { saveAs } from 'file-saver';
 let downloadUrl = window.URL.createObjectURL(res);
+saveAs(downloadUrl);
 
 getVideo() {
     const headers = new HttpHeaders().set('Range', 'bytes=0-'); // Request the initial chunk
